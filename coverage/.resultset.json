@@ -1,0 +1,129 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/models/enquiry.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/controllers/application_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/controllers/enquiries_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/mailers/enquiry_mailer.rb": [
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/jobs/application_job.rb": [
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/helpers/enquiries_helper.rb": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/helpers/application_helper.rb": [
+        0,
+        0
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/ajackusconsultancy/Documents/vts-assignment/contact-form/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1597416186
+  }
+}
