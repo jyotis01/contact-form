@@ -2,7 +2,7 @@
 
 ##### Prerequisites
 
-The setups steps expect following tools installed on the system.
+The setup expects following tools installed on the system.
 
 - Ruby [2.7.0]
 - Rails [6.0.3.2]
@@ -11,7 +11,6 @@ The setups steps expect following tools installed on the system.
 - PostgreSQL
 
 ##### 1. Check out the repository
-
 
 ```bash
 git clone https://github.com/ajackus/contact-form.git
@@ -33,7 +32,26 @@ rake db:create
 rake db:migrate
 ```
 
-##### 4. Start the Rails server
+##### 4. Add GMAIL credentials
+
+- To add the credentials, run the following command, which creates a config/application.yml file and modifies the .gitignore file to prevent the file from being checked into a git repository.
+
+    ```ruby
+    bundle exec figaro install
+    ```
+- Add the following key-value pairs in config/application.yml
+
+    MAILER_EMAIL: 'xxxxx@xxx.in'
+    MAILER_PASSWORD: '**********'
+    MAILER_EMAIL_TO: 'xxxxx@xxx.in'
+
+##### 5. Install the dependencies
+
+```ruby
+bundle install
+```
+
+##### 6. Start the Rails server
 
 You can start the rails server using the command given below.
 
