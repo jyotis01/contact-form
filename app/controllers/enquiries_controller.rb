@@ -1,9 +1,7 @@
 class EnquiriesController < ApplicationController
 
-  before_action :enquiry_params, only: [:create]
-
   def index
-    @enquiry = Enquiry.new
+    @enquiry = Enquiry.new(params[:enquiry])
   end
 
   def create

@@ -1,6 +1,14 @@
 <div class="container-contact100">
 	<div class="wrap-contact100">
-		<%= form_with(model: @enquiry, local: true, class: 'contact100-form validate-form ')  do |form| %>
+		<%= form_with scope: :enquiry, url: enquiries_path, local: true, class: 'contact100-form validate-form' do |form| %>
+			<% if @enquiry.errors.any? %>
+				<div id='error_explanation'>
+					<h5>Please fill in the required details correctly</h5>
+					<% @enquiry.errors.full_messages.each do |msg| %>
+						<p><%= msg %></p>
+					<% end %>
+				</div>
+			<% end %>
 			<span class="contact100-form-title">
 				Send Us A Message
 			</span>
@@ -9,6 +17,7 @@
 				<%= form.text_field :firstname, class: 'input100', placeholder: 'First name' %>
 				<span class="focus-input100"></span>
 			</div>
+
 			<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
 				<%= form.text_field :lastname, class: 'input100', placeholder: 'Last name' %>
 				<span class="focus-input100"></span>

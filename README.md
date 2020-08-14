@@ -34,16 +34,11 @@ rake db:migrate
 
 ##### 4. Add GMAIL credentials
 
-- To add the credentials, run the following command, which creates a config/application.yml file and modifies the .gitignore file to prevent the file from being checked into a git repository.
+To add the credentials, run the following command, which creates a config/application.yml file and modifies the .gitignore file to prevent the file from being checked into a git repository. Please ask for sample config file.
 
-    ```ruby
-    bundle exec figaro install
-    ```
-- Add the following key-value pairs in config/application.yml
-
-    MAILER_EMAIL: 'xxxxx@xxx.in'
-    MAILER_PASSWORD: '**********'
-    MAILER_EMAIL_TO: 'xxxxx@xxx.in'
+```ruby
+bundle exec figaro install
+```
 
 ##### 5. Install the dependencies
 
