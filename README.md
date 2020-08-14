@@ -1,24 +1,44 @@
-# README
+# Contact Form
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Prerequisites
 
-Things you may want to cover:
+The setups steps expect following tools installed on the system.
 
-* Ruby version
+- Ruby [2.7.0]
+- Rails [6.0.3.2]
+- Node.js
+- Yarn
+- PostgreSQL
 
-* System dependencies
+##### 1. Check out the repository
 
-* Configuration
 
-* Database creation
+```bash
+git clone https://github.com/ajackus/contact-form.git
+```
 
-* Database initialization
+##### 2. Setup database config
 
-* How to run the test suite
+Edit config/database.yml file and add your PostgreSQL user username and password.
 
-* Services (job queues, cache servers, search engines, etc.)
+##### 3. Create and setup the database
 
-* Deployment instructions
+Run the following commands to create and setup the database.
 
-* ...
+```ruby
+rake db:create
+```
+
+```ruby
+rake db:migrate
+```
+
+##### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
