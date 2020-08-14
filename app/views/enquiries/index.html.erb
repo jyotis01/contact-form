@@ -1,6 +1,11 @@
 <div class="container-contact100">
 	<div class="wrap-contact100">
 		<%= form_with scope: :enquiry, url: enquiries_path, local: true, class: 'contact100-form validate-form' do |form| %>
+			<% flash.each do |type, msg| %>
+				<div class="alert alert-info">
+					<%= msg %>
+				</div>
+			<% end %>
 			<% if @enquiry.errors.any? %>
 				<div id='error_explanation'>
 					<h5><%= (t 'form.error') %></h5>
@@ -98,9 +103,9 @@
 	</div>
 </div>
 <div class='language-selector'>
-  <%= (t 'language.title') %>
-  <ul>
-    <li><%= link_to (t 'language.en'), current_page_params.merge(locale: 'en') %></li>
-    <li><%= link_to (t 'language.hi'), current_page_params.merge(locale: 'hi') %></li>
-  </ul>
+	<%= (t 'language.title') %>
+	<ul>
+		<li><%= link_to (t 'language.en'), url_for( :locale => 'en' ) %></li>
+		<li><%= link_to (t 'language.hi'), url_for( :locale => 'hi' ) %></li>
+	</ul>
 </div>
