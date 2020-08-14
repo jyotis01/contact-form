@@ -1,0 +1,46 @@
+hi:
+  activerecord:
+    errors:
+      models:
+        enquiry:
+          attributes:
+            firstname:
+              too_short: 'फर्स्टनाम बहुत छोटा नहीं हो सकता है'
+            lastname:
+              too_short: 'अंतिम नाम बहुत छोटा नहीं हो सकता है'
+            email:
+              blank: 'ईमेल आईडी रिक्त नहीं हो सकता'
+              invalid: 'अमान्य ईमेल आईडी'
+            message:
+              too_short: 'संदेश बहुत छोटा नहीं हो सकता'
+  form:
+    name:
+      title: 'हमें अपना नाम बताओ *'
+      first: 'पहला नाम'
+      last: 'अंतिम नाम'
+    email:
+      title: 'अपना ईमेल दर्ज करें *'
+      example: 'जैसे: example@email.com'
+    phone:
+      title: 'फ़ोन नंबर दर्ज करें'
+      example: 'जैसे: +1800 0000000'
+    error: 'कृपया आवश्यक विवरण सही ढंग से भरें'
+    message: 
+      title: 'संदेश *'
+      example: 'हमें एक संदेश लिखें'
+    send_msg: 
+      title: 'हमें एक संदेश लिखें'
+      btn: 'संदेश भेजें'
+  address:
+    title: 'पता'
+    full_address: 'माडा सेंटर 8 वीं मंजिल, 379 हडसन सेंट, न्यूयॉर्क, एनवाई 10018 यूएस'
+  contact:
+    title: 'लेट्स टॉक'
+    number: '+1 800 1236879'
+  support:
+    title: 'सामान्य समर्थन'
+    email: 'contact@example.com'
+  language: 
+    title: 'भाषा'
+    en: 'अंग्रेज़ी'
+    hi: 'हिन्दी'

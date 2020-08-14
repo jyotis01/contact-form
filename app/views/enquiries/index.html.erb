@@ -3,46 +3,46 @@
 		<%= form_with scope: :enquiry, url: enquiries_path, local: true, class: 'contact100-form validate-form' do |form| %>
 			<% if @enquiry.errors.any? %>
 				<div id='error_explanation'>
-					<h5>Please fill in the required details correctly</h5>
+					<h5><%= (t 'form.error') %></h5>
 					<% @enquiry.errors.full_messages.each do |msg| %>
 						<p><%= msg %></p>
 					<% end %>
 				</div>
 			<% end %>
 			<span class="contact100-form-title">
-				Send Us A Message
+				<%= (t 'form.send_msg.title') %>
 			</span>
-			<label class="label-input100" for="first-name">Tell us your name *</label>
+			<label class="label-input100" for="first-name"><%= (t 'form.name.title') %></label>
 			<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-				<%= form.text_field :firstname, class: 'input100', placeholder: 'First name' %>
+				<%= form.text_field :firstname, class: 'input100', placeholder: (t 'form.name.first') %>
 				<span class="focus-input100"></span>
 			</div>
 
 			<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-				<%= form.text_field :lastname, class: 'input100', placeholder: 'Last name' %>
+				<%= form.text_field :lastname, class: 'input100', placeholder: (t 'form.name.last') %>
 				<span class="focus-input100"></span>
 			</div>
 
-			<label class="label-input100" for="email">Enter your email *</label>
+			<label class="label-input100" for="email"><%= (t 'form.email.title') %></label>
 			<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-				<%= form.text_field :email, class: 'input100', placeholder: 'Eg. example@email.com' %>
+				<%= form.text_field :email, class: 'input100', placeholder: (t 'form.email.example') %>
 				<span class="focus-input100"></span>
 			</div>
 
-			<label class="label-input100" for="phone">Enter phone number</label>
+			<label class="label-input100" for="phone"><%= (t 'form.phone.title') %></label>
 			<div class="wrap-input100">
-				<%= form.text_field :phone_number, class: 'input100', placeholder: 'Eg. +1 800 000000' %>
+				<%= form.text_field :phone_number, class: 'input100', placeholder: (t 'form.phone.example') %>
 				<span class="focus-input100"></span>
 			</div>
 
-			<label class="label-input100" for="message">Message *</label>
+			<label class="label-input100" for="message"><%= (t 'form.message.title') %></label>
 			<div class="wrap-input100 validate-input" data-validate = "Message is required">
-				<%= form.text_area :message, size: '50x10', class: 'input100', placeholder: "Write us a message" %>
+				<%= form.text_area :message, size: '50x10', class: 'input100', placeholder: (t 'form.message.example') %>
 				<span class="focus-input100"></span>
 			</div>
 
 			<div class="container-contact100-form-btn">
-				<%= form.submit 'Send Message', class: 'contact100-form-btn' %>
+				<%= form.submit (t 'form.send_msg.btn'), class: 'contact100-form-btn' %>
 			</div>
 		<% end %>
 
@@ -54,11 +54,11 @@
 
 				<div class="flex-col size2">
 					<span class="txt1 p-b-20">
-						Address
+						<%= (t 'address.title') %>
 					</span>
 
 					<span class="txt2">
-						Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+						<%= (t 'address.full_address') %>
 					</span>
 				</div>
 			</div>
@@ -70,11 +70,11 @@
 
 				<div class="flex-col size2">
 					<span class="txt1 p-b-20">
-						Lets Talk
+						<%= (t 'contact.title') %>
 					</span>
 
 					<span class="txt3">
-						+1 800 1236879
+						<%= (t 'contact.number') %>
 					</span>
 				</div>
 			</div>
@@ -86,14 +86,21 @@
 
 				<div class="flex-col size2">
 					<span class="txt1 p-b-20">
-						General Support
+						<%= (t 'support.title') %>
 					</span>
 
 					<span class="txt3">
-						contact@example.com
+						<%= (t 'support.email') %>
 					</span>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+<div style='text-align: center; padding: 10px'>
+  <%= (t 'language.title') %>
+  <ul>
+    <li><%= link_to (t 'language.en'), current_page_params.merge(locale: 'en') %></li>
+    <li><%= link_to (t 'language.hi'), current_page_params.merge(locale: 'hi') %></li>
+  </ul>
 </div>
